@@ -1,0 +1,16 @@
+# ISCLOUDtest
+Spring java development for entry exam 
+
+
+RUN: root folder
+     mvnw spring-boot:runt
+
+Config Info
+    maven dependencies for files 
+      commons-io
+    adoptopenjdk 11
+    Initialzr
+      https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.3.3.RELEASE&packaging=jar&jvmVersion=11&groupId=com.selecttest&artifactId=guiproperties&name=guiproperties&description=GUI%20for%20file%20managing%20&packageName=com.selecttest.guiproperties&dependencies=web
+      
+      
+      
