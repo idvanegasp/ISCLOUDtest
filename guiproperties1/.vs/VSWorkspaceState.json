@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\main",
+    "\\src\\main\\java",
+    "\\src\\main\\java\\com",
+    "\\src\\main\\java\\com\\selecttest",
+    "\\src\\main\\java\\com\\selecttest\\guiproperties",
+    "\\src\\main\\java\\com\\selecttest\\guiproperties\\controller",
+    "\\src\\main\\resources",
+    "\\src\\main\\resources\\templates"
+  ],
+  "SelectedNode": "\\src\\main\\resources\\templates\\view\\index.html",
+  "PreviewInSolutionExplorer": false
+}
