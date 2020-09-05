@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title> GUiproperties  - update values form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h2> Input new values </h2>
+                <form action="propsupdate"  method="POST" >
+                    <div class="form-groups">
+                        <label> DB_SID </label>
+                        <input type="text" class="form-control" id="DB_SID" name="DB_SID" />
+                        <label> DB_IP </label>
+                        <input type="text" class="form-control" id="DB_IP" name="DB_IP" />
+
+                        <label> DB_PORT </label>
+                        <input type="text" class="form-control" id="DB_PORT" name="DB_PORT" />
+
+                        <label> DB_USER </label>
+                        <input type="text" class="form-control" id="DB_USER" name="DB_USER" />
+
+                        <label> DB_PASS </label>
+                        <input type="text" class="form-control" id="DB_PASS" name="DB_PASS" />
+
+                        <label> DB_PARTS </label>
+                        <input type="text" class="form-control" id="DB_PARTS" name="DB_PARTS" />
+
+                        <label> DB_MINCX </label>
+                        <input type="text" class="form-control" id="DB_MINCX" name="DB_MINCX" />
+
+                        <label> DB_MAXCX </label>
+                        <input type="text" class="form-control" id="DB_MAXCX" name="DB_MAXCX" />
+
+                        <label> DB_PDF </label>
+                        <input type="text" class="form-control" id="DB_PDF" name="DB_PDF" />
+
+                        <label> DB_MAILS </label>
+                        <input type="text" class="form-control" id="DB_MAILS" name="DB_MAILS" />
+                    </div>
+                    <button type="submit" class="btn btn-primary"> Ok </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

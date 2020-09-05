@@ -13,42 +13,58 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
-                <h2> Locate your file </h2>
-                <!-- parametriza ubicacion del archivo-->
-                <form action="fileupload"  method="POST" enctype="multipart/form-data">
-                    <div class="form-groups">
-                        <label for="fileupload"> Select file </label>
-                        <input type="file" class="form-control" id="file" name="file" />
-                    </div>
-                    <button type="submit" class="btn btn-primary"> Submit </button>
-                </form>
-            </div>
+
             <div class="col-md-12">
                 <h2> File attributes </h2>
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">DB_SID</th>
-                            <th scope="col">DB_PWD</th>
-                            <th scope="col">DB_URL</th>
-                            <th scope="col">DB_BB</th>
+                            <th scope="col">DB_IP</th>
+                            <th scope="col">DB_PORT</th>
+                            <th scope="col">DB_USER</th>
+                            <th scope="col">DB_PASS</th>
+                            <th scope="col">DB_PART</th>
+                            <th scope="col">DB_MinCxPpart</th>
+                            <th scope="col">DB_MaxCxPpart</th>
+                            <th scope="col">DB_PDFPATH</th>
+                            <th scope="col">DB_MAILS</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr th:each="arg : ${FileConfig}">
-                            <td th:text="${arg.dB_SID}"></td>
-                            <td th:text="${arg.dB_IP}"></td>
-                            <td th:text="${arg.dB_Port}"></td>
-                            <td th:text="${arg.dB_UserName}"></td>
+                        <tr th:object="${params}">
+                            <td th:text="${params[0]}"> </td>
+                            <td th:text="${params[1]}"> </td>
+                            <td th:text="${params[2]}"> </td>
+                            <td th:text="${params[3]}"> </td>
+                            <td th:text="${params[4]}"> </td>
+                            <td th:text="${params[5]}"> </td>
+                            <td th:text="${params[6]}"> </td>
+                            <td th:text="${params[7]}"> </td>
+                            <td th:text="${params[8]}"> </td>
+                            <td th:text="${params[9]}"> </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+
+            <div class="col-md-12">
+                <a href="/view/update"><h3> Update values </h3></a>
+            </div>
+
+            <div class="col-md-12">
+                <h2> Or change your file </h2>
+                <!-- parametriza ubicacion del archivo-->
+                <form action="fileupload" method="POST" enctype="multipart/form-data">
+                    <div class="form-groups">
+                        <label for="fileupload"> Locate file </label>
+                        <input type="file" class="form-control" id="file" name="file" />
+                    </div>
+                    <button type="submit" class="btn btn-primary"> Accept </button>
+                </form>
+            </div>
         </div>
     </div>
 
-
-    <a href="/hello"> Hi HI </a>
 </body>
 </html>
