@@ -21,6 +21,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.io.IOException; 
 import java.io.FileOutputStream; 
 import java.util.ArrayList; 
+import org.springframework.core.io.FileSystemResource;
+import java.io.FileWriter; 
+
 @Controller
 //@Configuration
 //@RefreshScope 
@@ -87,7 +90,8 @@ public class GuipropertiesController extends WebMvcConfigurerAdapter {
 	@PostMapping( value="/view/fileupload" )
 	public String index( @RequestParam("file") MultipartFile file , Model model) throws IOException{
 		
-		File convertFile = new File ("src\\main\\resources\\application.properties");
+		File convertFile = new File ("src\\main\\resources\\config.properties");
+		//File convertFile = new File ("config.properties");
 		convertFile.createNewFile();
 		FileOutputStream fos = new FileOutputStream(convertFile); 
 		fos.write(file.getBytes());
@@ -111,7 +115,10 @@ public class GuipropertiesController extends WebMvcConfigurerAdapter {
 	}
 
 	@GetMapping("/view/update")
-	public String updateform(){
+	public String updateform(Model model){
+		model.addAttribute("FileConfig", new FileConfig());
+		List<String> params = properties_file.getParams();
+		model.addAttribute("params", params);
 		return "view/update";
 	}
 
@@ -121,7 +128,7 @@ public class GuipropertiesController extends WebMvcConfigurerAdapter {
 							@RequestParam("DB_USER") String db_user, @RequestParam("DB_PASS") String db_pass, @RequestParam("DB_PARTS") String db_part, 
 							@RequestParam("DB_MINCX") String db_mincx, @RequestParam("DB_MAXCX") String db_maxcx,
 							@RequestParam("DB_PDF") String db_pdf, @RequestParam("DB_MAILS") String db_mails,
-							Model model){
+							Model model) throws IOException{
 		List<String> params = new ArrayList<String> (10);
 		params.add(db_sid);
 		params.add(db_ip);
@@ -135,6 +142,17 @@ public class GuipropertiesController extends WebMvcConfigurerAdapter {
 		params.add(db_mails);
 		model.addAttribute("params", params);
 		System.out.println("UPDATED");
+
+		File convertFile = new File("src\\main\\resources\\config.properties")
+		//for JAR
+		//File convertFile = new File ("config.properties");
+		convertFile.createNewFile();
+		FileWriter fw = new FileWriter("config.properties"); 
+		
+		for ( String arg : params){
+			fw.write(arg+"\n");
+		}
+		fw.close() ;
 		return "view/index";
 	}
 	/* Writing

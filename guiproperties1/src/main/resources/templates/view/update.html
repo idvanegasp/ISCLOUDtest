@@ -17,34 +17,35 @@
                 <h2> Input new values </h2>
                 <form action="propsupdate"  method="POST" >
                     <div class="form-groups">
+
                         <label> DB_SID </label>
-                        <input type="text" class="form-control" id="DB_SID" name="DB_SID" />
+                        <input  width="45" type="text" class="form-control" id="DB_SID" name="DB_SID" value="" th:value="${params[0]}"/>
                         <label> DB_IP </label>
-                        <input type="text" class="form-control" id="DB_IP" name="DB_IP" />
+                        <input width="45" type="text" class="form-control" id="DB_IP" name="DB_IP" th:value="${params[1]}"/>
 
                         <label> DB_PORT </label>
-                        <input type="text" class="form-control" id="DB_PORT" name="DB_PORT" />
+                        <input width="45" type="text" class="form-control" id="DB_PORT" name="DB_PORT" th:value="${params[2]}"/>
 
                         <label> DB_USER </label>
-                        <input type="text" class="form-control" id="DB_USER" name="DB_USER" />
+                        <input width="45" type="text" class="form-control" id="DB_USER" name="DB_USER" th:value="${params[3]}"/>
 
                         <label> DB_PASS </label>
-                        <input type="text" class="form-control" id="DB_PASS" name="DB_PASS" />
+                        <input width="45" type="text" class="form-control" id="DB_PASS" name="DB_PASS" th:value="${params[4]}"/>
 
                         <label> DB_PARTS </label>
-                        <input type="text" class="form-control" id="DB_PARTS" name="DB_PARTS" />
+                        <input width="45" type="text" class="form-control" id="DB_PARTS" name="DB_PARTS" th:value="${params[5]}"/>
 
                         <label> DB_MINCX </label>
-                        <input type="text" class="form-control" id="DB_MINCX" name="DB_MINCX" />
+                        <input width="45" type="text" class="form-control" id="DB_MINCX" name="DB_MINCX" th:value="${params[6]}" />
 
                         <label> DB_MAXCX </label>
-                        <input type="text" class="form-control" id="DB_MAXCX" name="DB_MAXCX" />
+                        <input width="45" type="text" class="form-control" id="DB_MAXCX" name="DB_MAXCX" th:value="${params[7]}"/>
 
                         <label> DB_PDF </label>
-                        <input type="text" class="form-control" id="DB_PDF" name="DB_PDF" />
+                        <input width="45" type="text" class="form-control" id="DB_PDF" name="DB_PDF" th:value="${params[8]}"/>
 
                         <label> DB_MAILS </label>
-                        <input type="text" class="form-control" id="DB_MAILS" name="DB_MAILS" />
+                        <input width="45" type="text" class="form-control" id="DB_MAILS" name="DB_MAILS" th:value="${params[9]}" />
                     </div>
                     <button type="submit" class="btn btn-primary"> Ok </button>
                 </form>

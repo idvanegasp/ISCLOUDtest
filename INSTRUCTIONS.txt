@@ -3,7 +3,11 @@ Spring java development for entry exam
 
 
 RUN: root folder
-     mvnw spring-boot:runt
+     mvnw spring-boot:run
+
+
+JAR: mvnw clean package
+     java -jar GUIProperties­0.1.jar.jar
 
 Config Info
     maven dependencies for files 
